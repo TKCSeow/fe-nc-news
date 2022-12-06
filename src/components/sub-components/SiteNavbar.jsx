@@ -8,7 +8,7 @@ import NavDropdown from "react-bootstrap/NavDropdown";
  function SiteNavbar () {
 
     return <Navbar className="site-navbar">
-        <Container>
+        <Container className="--content-width">
             <Navbar.Toggle aria-controls="site-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">

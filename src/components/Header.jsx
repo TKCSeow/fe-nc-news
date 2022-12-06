@@ -6,14 +6,14 @@ import SiteNavbar from "./sub-components/SiteNavbar";
 function Header () {
 
     return <header className="site-header">
-        <Container>
+        <Container className="--content-width">
             <Row>
                 <Col>
                     <h1>NC News</h1>
                 </Col>
             </Row>
             <Row>
-                <SiteNavbar/>
+                <SiteNavbar />
             </Row>
         </Container>
     </header>
