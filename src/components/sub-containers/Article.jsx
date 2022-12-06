@@ -9,11 +9,10 @@ import Comments from "../sub-components/Comments";
 function Article () {
     const [article, setArticle] = useState({});
 
-    const param = useParams().article;
-    const id = param.split('-')[0]
+    const articleId = useParams().article;
 
     useEffect(() => {
-        getArticleById(id).then((articleData)=>{
+        getArticleById(articleId).then((articleData)=>{
             setArticle(articleData);
         })
     }, [])
@@ -30,7 +29,7 @@ function Article () {
             <p className="article-image-caption">| Caption for above image</p>
 
             <p className="article-body">{article.body}</p>
-            <Comments articleId={id}/>
+            <Comments articleId={articleId}/>
     </section>
 }
 

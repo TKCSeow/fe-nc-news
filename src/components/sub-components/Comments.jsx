@@ -14,15 +14,18 @@ function Comments ({articleId}) {
 
     return <section className="comments-section">
         <p>COMMENTS</p>
-        <ul className="comment-list">
-            {comments.map((comment) => {
-                return <li className="comment-list-item">
-                    <p className="comment-list-item__username">{comment.author}</p>
-                    <p className="comment-list-item__date">{formatDateForComments(comment.created_at)}</p>
-                    <p className="comment-list-item__body">{comment.body}</p>
-                </li>
-            })}
-        </ul>
+        {comments.length === 0 ? 
+        <p className="no-comment-message">No comments on this article</p> :
+            <ul className="comment-list">
+                {comments.map((comment) => {
+                    return <li key={comment.comment_id} className="comment-list-item">
+                        <p className="comment-list-item__username">{comment.author}</p>
+                        <p className="comment-list-item__date">{formatDateForComments(comment.created_at)}</p>
+                        <p className="comment-list-item__body">{comment.body}</p>
+                    </li>
+                })}
+            </ul>
+        }
     </section>
         
 }
