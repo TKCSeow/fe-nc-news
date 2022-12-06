@@ -10,3 +10,10 @@ export function getArticles(){
             return response.data.articles;
         })
 }
+
+export function getArticleById(id){
+    return newsApi(`/articles/${id}`)
+        .then((response) => {
+            return response.data.article;
+        })
+}
