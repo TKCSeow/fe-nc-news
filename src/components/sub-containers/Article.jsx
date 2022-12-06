@@ -1,22 +1,18 @@
-import Container from "react-bootstrap/Container";
-import Col from "react-bootstrap/Col";
-import Row from "react-bootstrap/Row";
 import Image from 'react-bootstrap/Image'
 import placeholderImg from "../../images/placeholder_img.jpg"
-import {Routes, Route, useParams} from 'react-router'
-import { useContext } from "react";
+import { useParams } from 'react-router'
 import { useEffect, useState } from "react";
 import { getArticleById } from "../../utils/api";
 import { formatDateForArticle } from "../../utils/formatting";
+import Comments from "../sub-components/Comments";
 
 function Article () {
     const [article, setArticle] = useState({});
 
-    const param = useParams().article;
-    const id = param.split('-')[0]
+    const articleId = useParams().article;
 
     useEffect(() => {
-        getArticleById(id).then((articleData)=>{
+        getArticleById(articleId).then((articleData)=>{
             setArticle(articleData);
         })
     }, [])
@@ -33,7 +29,7 @@ function Article () {
             <p className="article-image-caption">| Caption for above image</p>
 
             <p className="article-body">{article.body}</p>
-      
+            <Comments articleId={articleId}/>
     </section>
 }
 
