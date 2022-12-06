@@ -102,3 +102,9 @@ h1 {
 .article-image-caption {
   color: #787878;
 }
+
+.votes-error-message {
+  font-weight: bold;
+  color: #b72b2b;
+  font-size: 0.8rem;
+}
