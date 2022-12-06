@@ -7,14 +7,9 @@ import { formatDate } from "../../utils/formatting";
 
 function ArticleListItem ({article, isFirst}) {
 
-    let img = { xs: 4, sm: 12, md: 12 }
-    let text = { xs: 8, sm: 12, md: 12 }
-
     // Apply different breakpoints for first article in list
-    if (isFirst) {
-        img = { xs: 12, sm: 7, md: 7 }
-        text = { xs: "auto", sm: 5, md: 5 }
-    }
+    const img = isFirst ? { xs: 12, sm: 7, md: 7 } : { xs: 4, sm: 12, md: 12 }
+    const text = isFirst ? { xs: "auto", sm: 5, md: 5 } : { xs: 8, sm: 12, md: 12 }
 
     return <li className="article-list-item">
         <Row className="h-100 mb-2">

@@ -16,17 +16,10 @@ function ArticleList () {
         })
     }, [])
 
-    function makeArticleIfExists(article) {
-        if (article === undefined) {
-            return "";
-        }
-
-        return <ArticleListItem key={article.article_id} article={article} isFirst={false}/>
-    }
-
     return <section>
         <ul className="article-list">
             {articles.map((article, index, articlesArr) => {
+                
                 if(index === 0) {
                     return <Row key={article.article_id} >
                         <ArticleListItem article={article} isFirst={true}/>
@@ -36,7 +29,7 @@ function ArticleList () {
                 //Groups three articles together in a row
                 if ((index + 2) % 3 === 0) {
                     let breakpoints = { xs: 12, sm: 4, md: 4 }
-                    
+
                     return <Row key={article.article_id}>
                         <Col xs={breakpoints.xs} sm={breakpoints.sm} md={breakpoints.md}>
                             <ArticleListItem article={articlesArr[index]} isFirst={false}/>
@@ -50,8 +43,7 @@ function ArticleList () {
                         {articlesArr[index + 2] !== undefined ? 
                                 <ArticleListItem article={articlesArr[index + 2]} isFirst={false}/> 
                                 : null}
-                        </Col>
-                        
+                        </Col>                       
                     </Row>
                 }
 
