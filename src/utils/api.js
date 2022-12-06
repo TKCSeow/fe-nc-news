@@ -17,3 +17,13 @@ export function getArticleById(id){
             return response.data.article;
         })
 }
+
+export function patchArticleVotes(id){
+
+    return newsApi.patch(`/articles/${id}`, {
+        inc_vote: 1,
+      })
+        .then((response) => {
+            return response.data.article;
+        })
+}

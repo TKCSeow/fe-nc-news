@@ -8,6 +8,7 @@ import { useContext } from "react";
 import { useEffect, useState } from "react";
 import { getArticleById } from "../../utils/api";
 import { formatDateForArticle } from "../../utils/formatting";
+import { Votes } from "../sub-components/Votes";
 
 function Article () {
     const [article, setArticle] = useState({});
@@ -33,6 +34,7 @@ function Article () {
             <p className="article-image-caption">| Caption for above image</p>
 
             <p className="article-body">{article.body}</p>
+            <Votes article={article}/>
       
     </section>
 }
