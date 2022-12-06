@@ -22,3 +22,10 @@ export function formatDateForArticle(dateStr) {
 
     return `${formatDay(date.getDate())} ${formatMonth(date.getMonth())} ${date.getFullYear()}`
 }
+
+export function formatDateForComments(dateStr) {   
+    const date = new Date(dateStr);
+    const formattedDate = date.toLocaleString('en-GB');
+    const trimmedFormattedDate = formattedDate.split('').splice(0, formattedDate.length - 3).join('')
+    return trimmedFormattedDate.replace(',', '');
+}
