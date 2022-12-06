@@ -2,3 +2,54 @@
   margin: 0;
   padding: 0
 }
+
+.App {
+  width: 100%;
+}
+
+h1 {
+  font-size: 2.5rem !important;
+}
+
+.--content-width {
+  max-width: 936px !important;
+}
+
+.site-header {
+  color: rgb(255, 254, 254);
+  background-color: #fa5252;
+  width: 100vw !important;
+}
+
+.site-navbar {
+  color: rgb(255, 254, 254) !important;
+  background-color: #fa5252 !important;
+}
+
+.site-navbar__link {
+  color: rgb(255, 254, 254) !important;
+}
+
+.site-navbar__link:hover {
+  color: rgb(59, 59, 59) !important;
+}
+
+.article-list {
+  list-style: none;
+  padding: 0;
+}
+
+.article-list-item {
+  border-bottom: 1px solid #bdbdbd;
+  padding: 1rem 0 1rem 0;
+  height: 100%;
+  margin-bottom: 1rem ;
+}
+
+.article-list-item h2 {
+  font-size: 1.3rem;
+}
+
+.article-list-item p {
+  color: rgb(85, 85, 85);
+}
