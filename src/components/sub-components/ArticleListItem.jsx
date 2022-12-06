@@ -21,7 +21,7 @@ function ArticleListItem ({article, isFirst}) {
             <Col xs={img.xs} sm={img.sm} md={img.md} className="">
                 <Image src={placeholderImg} fluid></Image>
             </Col>
-            <Col xs={text.xs} sm={text.sm}  md={text.md} className="d-flex flex-column align-text-top align-top">
+            <Col xs={text.xs} sm={text.sm}  md={text.md} className="d-flex flex-column">
                 <Row className="mb-auto" >                   
                     <h2><b>{article.title}</b></h2>              
                 </Row>

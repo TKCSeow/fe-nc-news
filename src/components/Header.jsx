@@ -20,9 +20,4 @@ function Header () {
 
 }
 
-const header = {
-    color: "white",
-    backgroundColor: "#fa5252"
-}
-
 export default Header;
