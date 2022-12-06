@@ -1,6 +1,7 @@
 import Container from 'react-bootstrap/Container';
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
+import { LinkContainer } from 'react-router-bootstrap';
 
 
  function SiteNavbar () {
@@ -10,7 +11,9 @@ import Nav from "react-bootstrap/Nav";
             <Navbar.Toggle aria-controls="site-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-                <Nav.Link className="site-navbar__link">Home</Nav.Link>
+                <LinkContainer to="/">
+                    <Nav.Link className="site-navbar__link">Home</Nav.Link>
+                </LinkContainer>               
                 <div className="m-auto">|</div>
                 <Nav.Link className="site-navbar__link">Topic 1</Nav.Link>
                 <div className="m-auto">|</div>
