@@ -137,9 +137,38 @@ h1 {
   font-size: 0.7rem;
 }
 
+.votes-button  {
+  color: #fa5252 !important;
+  background-color: rgb(255, 254, 254) !important;
+  border: 2px solid #fa5252 !important;
+  border-radius: 0 !important;
+  padding: 0.2rem 0.5rem !important;
+}
+
+.votes-button:hover {
+  color:rgb(255, 254, 254) !important;
+  background-color: #fa5252 !important;
+  border: 2px solid #fa5252 !important;
+}
+
+.votes-button:active {
+  background-color: #c23e3e !important;
+  border-color: #c23e3e !important;
+}
+
+.votes-success-message {
+  font-weight: bold;
+  color: #339501;
+  font-size: 0.75rem;
+  margin-top: 0.5rem;
+  padding: 0;
+}
+
 .votes-error-message {
   font-weight: bold;
   color: #b72b2b;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
+  margin-top: 0.5rem;
+  padding: 0;
 }
 

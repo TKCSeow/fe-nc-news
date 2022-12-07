@@ -8,7 +8,7 @@ import { Votes } from "../sub-components/Votes";
 import Comments from "../sub-components/Comments";
 
 function Article () {
-    const [article, setArticle] = useState({});
+    const [article, setArticle] = useState(null);
 
     const articleId = useParams().article;
 
@@ -17,6 +17,10 @@ function Article () {
             setArticle(articleData);
         })
     }, [])
+
+    if(article === null) {
+        return null;
+    }
 
     return <section className="--article-width m-auto">
 
