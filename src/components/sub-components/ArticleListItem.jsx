@@ -1,7 +1,7 @@
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Image from 'react-bootstrap/Image'
-import placeholderImg from "../../images/placeholder_img.jpg"
+import placeholderImg from "../../images/placeholder_img_alt.jpg"
 import { Stack } from "react-bootstrap";
 import { formatDateForArticleList } from "../../utils/formatting";
 import { Link } from "react-router-dom";
@@ -20,7 +20,7 @@ function ArticleListItem ({article, isFirst}) {
                     </Link>        
             </Col>
             <Col xs={text.xs} sm={text.sm}  md={text.md} className="d-flex flex-column">
-                <Row className="mb-auto" > 
+                <Row className="" > 
                     <Link to={`/articles/${article.article_id}`}>                                   
                         <h2><b>{article.title}</b></h2> 
                     </Link>            
@@ -28,10 +28,9 @@ function ArticleListItem ({article, isFirst}) {
                <Row className="mt-auto" >
                 <Col>
                     <Stack direction="horizontal" gap={0} >
-                        <p className="text-capitalize">{article.topic} | By {article.author}</p>
+                        <p><span className="text-capitalize">{article.topic}</span> | By {article.author}</p>
                         <p className="ms-auto">{formatDateForArticleList(article.created_at)}</p>
-                    </Stack>
-                    
+                    </Stack>           
                 </Col>
      
                </Row>

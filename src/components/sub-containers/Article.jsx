@@ -1,5 +1,5 @@
 import Image from 'react-bootstrap/Image'
-import placeholderImg from "../../images/placeholder_img.jpg"
+import placeholderImg from "../../images/placeholder_img_alt.jpg"
 import { useParams } from 'react-router'
 import { useEffect, useState } from "react";
 import { getArticleById } from "../../utils/api";

@@ -76,6 +76,7 @@ h1 {
 
 .article-list-item p {
   color: rgb(85, 85, 85);
+  font-size: 0.8rem;
 }
 
 
@@ -101,6 +102,7 @@ h1 {
 
 .article-image-caption {
   color: #787878;
+  font-size: 0.8rem;
 }
 
 /* Comment List */
