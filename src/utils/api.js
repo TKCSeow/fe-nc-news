@@ -24,3 +24,13 @@ export function getCommentsByArticleId(id){
             return response.data.comments;
         })
 }
+
+export function postCommentByArticleId(articleId, userName, text){
+    return newsApi.post(`/articles/${articleId}/comments`, {
+        username: userName,
+        body: text
+    })
+        .then((response) => {
+            return response.data.comment;
+        })
+}
