@@ -18,6 +18,17 @@ export function getArticleById(id){
         })
 }
 
+export function patchArticleVotes(id){
+
+    return newsApi.patch(`/articles/${id}`, {
+        inc_votes: 1,
+      })
+        .then((response) => {
+            console.log(response.data)
+            return response.data.article;
+        })
+}
+
 export function getCommentsByArticleId(id){
     return newsApi(`/articles/${id}/comments`)
         .then((response) => {
