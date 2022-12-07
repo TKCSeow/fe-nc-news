@@ -76,6 +76,7 @@ h1 {
 
 .article-list-item p {
   color: rgb(85, 85, 85);
+  font-size: 0.8rem;
 }
 
 
@@ -101,6 +102,39 @@ h1 {
 
 .article-image-caption {
   color: #787878;
+  font-size: 0.8rem;
+}
+
+/* Comment List */
+
+.comments-section {
+  margin-top: 2rem;
+}
+
+.comment-list {
+  font-size: 0.8rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.comment-list-item {
+  border-top: 1px solid#bdbdbd;
+  padding: 1rem 0;
+} 
+
+.comment-list-item__username, .comment-list-item__username p {
+  margin: 0;
+}
+
+.comment-list-item__date {
+  color: #787878;
+  font-size: 0.7rem;
+}
+
+.no-comment-message {
+  color: #787878;
+  font-size: 0.7rem;
 }
 
 .votes-error-message {
@@ -108,3 +142,4 @@ h1 {
   color: #b72b2b;
   font-size: 0.8rem;
 }
+
