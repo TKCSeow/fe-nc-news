@@ -4,10 +4,11 @@ import { useParams } from 'react-router'
 import { useEffect, useState } from "react";
 import { getArticleById } from "../../utils/api";
 import { formatDateForArticle } from "../../utils/formatting";
+import { Votes } from "../sub-components/Votes";
 import Comments from "../sub-components/Comments";
 
 function Article () {
-    const [article, setArticle] = useState({});
+    const [article, setArticle] = useState(null);
 
     const articleId = useParams().article;
 
@@ -16,6 +17,10 @@ function Article () {
             setArticle(articleData);
         })
     }, [])
+
+    if(article === null) {
+        return null;
+    }
 
     return <section className="--article-width m-auto">
 
@@ -29,6 +34,7 @@ function Article () {
             <p className="article-image-caption">| Caption for above image</p>
 
             <p className="article-body">{article.body}</p>
+            <Votes article={article}/>
             <Comments articleId={articleId}/>
     </section>
 }
