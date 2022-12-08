@@ -4,8 +4,16 @@ const newsApi = axios.create({
     baseURL: "https://tim-nc-news.cyclic.app/api"
 })
 
-export function getArticles(){
-    return newsApi("/articles")
+export function getArticles(topic){
+    let queries = "?";
+
+    if (topic) {
+        queries += `topic=${topic}`;
+    }
+
+    queries = queries !== "?" ? queries : "";
+
+    return newsApi(`/articles${queries}`)
         .then((response) => {
             return response.data.articles;
         })
@@ -50,5 +58,12 @@ export function getUsers(){
     return newsApi(`/users`)
         .then((response) => {
             return response.data.users;
+        })
+}
+
+export function getTopics(){
+    return newsApi(`/topics`)
+        .then((response) => {
+            return response.data.topics;
         })
 }

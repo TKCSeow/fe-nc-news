@@ -3,20 +3,23 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { getArticles } from "../../utils/api";
 import ArticleListItem from "../sub-components/ArticleListItem";
-
+import { useSearchParams } from 'react-router-dom'
 
 function ArticleList () {
     const [articles, setArticles] = useState([]);
-
+    const [searchParams] = useSearchParams();
+    const topic = searchParams.get("topic")
+    console.log(topic)
 
     useEffect(() => {
-        getArticles().then((articlesData)=>{
+        getArticles(topic).then((articlesData)=>{
             setArticles(articlesData);
             console.log(articlesData);
         })
-    }, [])
+    }, [searchParams])
 
     return <section>
+        {topic ? <h2 className="text-capitalize topic-header">{topic}</h2> : null}
         <ul className="article-list">
             {articles.map((article, index, articlesArr) => {
                 
