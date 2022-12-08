@@ -2,22 +2,42 @@ import Container from 'react-bootstrap/Container';
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import { LinkContainer } from 'react-router-bootstrap';
+import { useEffect, useState } from 'react';
+import { getTopics } from '../../utils/api';
+import { Link } from 'react-router-dom';
+import { useScreenSize } from '../../custom-hooks/useScreenSize';
+import { NavDropdown } from 'react-bootstrap';
 
  function SiteNavbar () {
+    const [topics, setTopics] = useState([]);
+    const isSmallScreen = useScreenSize().isSmallScreen;
 
-    return <Navbar className="site-navbar" expand="sm">
+    useEffect(()=> {
+        getTopics().then(topicsData => {
+            setTopics(topicsData);
+            console.log(topicsData)
+        })
+    },[])
+
+    return <Navbar className="site-navbar g-0" style={{marginBottom:"0 !important"}}>
         <Container className="--content-width">
-            <Navbar.Toggle aria-controls="site-navbar-nav" />
-            <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-                <LinkContainer to="/">
-                    <Nav.Link className="site-navbar__link">Home</Nav.Link>
-                </LinkContainer>               
-                <Nav.Link className="site-navbar__link">Topic 1</Nav.Link>
-                <Nav.Link className="site-navbar__link">Topic 2</Nav.Link>
-                <Nav.Link className="site-navbar__link">Topic 3</Nav.Link>
+
+                <Link to="/"className="site-navbar__link">Home</Link>
+              
+                {isSmallScreen ? 
+                    <NavDropdown title="Topics" id="topics-nav-dropdown">
+                        {topics.map((topic) => {
+                            return <LinkContainer  key={topic.slug} to={{pathname:`/articles`, search:`topic=${topic.slug}`}} className="text-capitalize">
+                                <NavDropdown.Item>{topic.slug}</NavDropdown.Item>
+                            </LinkContainer>
+                        })}
+                    </NavDropdown>
+                    : topics.map((topic) => {
+                        return <Link key={topic.slug} to={`/articles?topic=${topic.slug}`}className="site-navbar__link text-capitalize"><span>{topic.slug}</span></Link>
+                    })
+                }
             </Nav>
-            </Navbar.Collapse>
             
             
         </Container>

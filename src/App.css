@@ -116,12 +116,15 @@ h1 {
 .site-navbar {
   color: rgb(255, 254, 254) !important;
   background-color: #fa5252 !important;
+  margin-bottom: 0 !important;
+
 }
 
-.site-navbar__link {
+.site-navbar__link, .site-navbar__link p {
+  font-size: 1.2rem;
   color: #fffefe !important;
-  
-  margin: 0 !important;
+  line-height: 1.2rem;
+  margin: 0.1rem 0 !important;
   padding: 0 0.5rem !important;
 }
 
@@ -131,6 +134,25 @@ h1 {
 
 .site-navbar__link:hover {
   color: rgb(59, 59, 59) !important;
+}
+
+#topics-nav-dropdown {
+  font-size: 1.2rem  !important;
+  color: #fffefe !important;
+  margin: 0 !important;
+  padding: 1.5px 0.5rem;
+  line-height: 1.2rem !important;
+}
+
+.dropdown-item {
+
+  font-size: 1rem;
+  background-color: #fffefe !important;
+  color: #242424 !important;
+}
+
+.dropdown-item:hover {
+  color: #818181 !important;
 }
 
 .sign-in-button {
@@ -168,6 +190,13 @@ h1 {
   padding: 0;
 }
 
+.topic-header {
+  display: inline-block;
+  width: auto;
+  margin-top: 1rem;
+  border-bottom: 3.5px solid #fa5252;
+  padding-bottom: 0.4rem;
+}
 
 /* Article List Item */
 .article-list-item {
