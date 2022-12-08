@@ -17,7 +17,7 @@ function Comments ({articleId}) {
         <p>COMMENTS</p>
         {comments.length === 0 ?
         <div>
-            <CommentForm comments={comments} articleId={articleId}/>
+            <CommentForm comments={setComments} articleId={articleId}/>
             <p className="no-comment-message">No comments on this article</p>
         </div> :
         <div>
