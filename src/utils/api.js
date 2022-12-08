@@ -4,9 +4,9 @@ const newsApi = axios.create({
     baseURL: "https://tim-nc-news.cyclic.app/api"
 })
 
-export function getArticles(topic){
+export function getArticles(topic, sortBy, order){
     return newsApi(`/articles`, {
-        params: { topic }
+        params: { topic , "sort_by" : sortBy, order}
     })
         .then((response) => {
             return response.data.articles;
