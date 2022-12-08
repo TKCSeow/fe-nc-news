@@ -19,15 +19,6 @@ import { NavDropdown } from 'react-bootstrap';
         })
     },[])
 
-    function toggleTopicsDropdown() {
-        if (isSmallScreen) {
-            return 
-        }
-
-
-        return 
-    }
-
     return <Navbar className="site-navbar g-0" style={{marginBottom:"0 !important"}}>
         <Container className="--content-width">
             <Nav className="me-auto">

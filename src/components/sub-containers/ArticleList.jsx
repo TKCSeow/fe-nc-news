@@ -9,12 +9,10 @@ function ArticleList () {
     const [articles, setArticles] = useState([]);
     const [searchParams] = useSearchParams();
     const topic = searchParams.get("topic")
-    console.log(topic)
 
     useEffect(() => {
         getArticles(topic).then((articlesData)=>{
             setArticles(articlesData);
-            console.log(articlesData);
         })
     }, [searchParams])
 
