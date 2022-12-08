@@ -5,7 +5,7 @@ import { getArticles } from "../../utils/api";
 import ArticleListItem from "../sub-components/ArticleListItem";
 
 
-function ArticleList () {
+function ArticleList ({isAllStyledSame = false}) {
     const [articles, setArticles] = useState([]);
 
 
@@ -22,7 +22,7 @@ function ArticleList () {
                 
                 if(index === 0) {
                     return <Row key={article.article_id} >
-                        <ArticleListItem article={article} isFirst={true}/>
+                        <ArticleListItem article={article} isFirst={isAllStyledSame}/>
                     </Row>
                 }
 

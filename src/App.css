@@ -108,9 +108,31 @@ h1 {
 .header-sign-in-button {
   color: rgb(255, 254, 254);
   font-size: 1.3rem;
-  margin: 0 1rem;
+  margin: 0 0rem;
 }
 
+/* Search Bar Header */
+.search-header-form {
+ margin: auto;
+}
+
+.search-header-input {
+  width: 75%;
+  text-align: end;
+  padding: 0 5px;
+  font-size: 1.2rem !important;
+}
+
+.search-header-button {
+  background-color: #ffffff00 !important;
+  border-color: #ffffff00 !important;
+  color: #242424 !important;
+}
+
+.search-header-button:hover {
+  border-color: #ffffff00 !important;
+  color: #fffefe !important;
+}
 
 /* Navbar */
 .site-navbar {
