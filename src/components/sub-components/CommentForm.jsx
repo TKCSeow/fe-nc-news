@@ -38,6 +38,7 @@ export function CommentForm ({setComments, articleId}) {
                 return [newComment, ...currComments]
             })
             setErrorMessage("")
+            setCommentInput("")
             event.target[0].disabled = false;
             event.target[1].disabled = false;
         })
