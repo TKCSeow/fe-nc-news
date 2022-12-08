@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { getCommentsByArticleId } from "../../utils/api";
 import { formatDateForComments } from "../../utils/formatting";
+import { CommentForm } from "./CommentForm";
 
 function Comments ({articleId}) {
 
@@ -14,8 +15,13 @@ function Comments ({articleId}) {
 
     return <section className="comments-section">
         <p>COMMENTS</p>
-        {comments.length === 0 ? 
-        <p className="no-comment-message">No comments on this article</p> :
+        {comments.length === 0 ?
+        <div>
+            <CommentForm comments={setComments} articleId={articleId}/>
+            <p className="no-comment-message">No comments on this article</p>
+        </div> :
+        <div>
+            <CommentForm setComments={setComments} articleId={articleId}/>
             <ul className="comment-list">
                 {comments.map((comment) => {
                     return <li key={comment.comment_id} className="comment-list-item">
@@ -25,6 +31,7 @@ function Comments ({articleId}) {
                     </li>
                 })}
             </ul>
+        </div>
         }
     </section>
         
