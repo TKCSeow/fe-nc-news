@@ -22,9 +22,9 @@ export function SignInState() {
         </Link>
     }
 
-    return <div className='header-sign-in-button mt-2' style={{fontSize:"0.8rem"}}>
+    return <div className='header-sign-in-button mt-2' style={{fontSize:"1.3rem"}}>
         <div className='text-end'><User/><span className='mx-1'>Hi {user.username}</span></div>
-        <Link onClick={() => {handleSignOut()}} className='--link-dark-alt' style={{fontSize:"0.7rem"}} >
+        <Link onClick={() => {handleSignOut()}} className='--link-dark-alt' style={{fontSize:"1rem"}} >
             <p className='m-0 text-end'>(Sign Out)</p>
         </Link>
     </div>

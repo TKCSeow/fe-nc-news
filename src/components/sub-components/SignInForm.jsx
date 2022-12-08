@@ -37,17 +37,17 @@ function LoginForm () {
         return redirectLink !== null ? redirectLink : "/";
     }
 
-    return <Card style={{ minWidth: '18rem', maxWidth: '18rem', }}  className="login-card mx-auto">
-        <Container style={{ maxWidth: '17rem' }}>
+    return <Card style={{ minWidth: '36rem', maxWidth: '36rem', }}  className="login-card mx-auto p-3">
+        <Container style={{ maxWidth: '24rem' }}>
             <Row>
             <Card.Body>
                 <Card.Title className="text-center mb-4">Sign In</Card.Title>
                 {/* <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle> */}
-                <Form onSubmit={(event) => {handleSignIn(event)}} >
+                <Form onSubmit={(event) => {handleSignIn(event)}} className="py-5">
                     <Form.Group className="mb-4" controlId="formBasicEmail">
                         <Form.Label>Username</Form.Label>
                         <Form.Control required type="text" placeholder="Enter username" value={usernameInput} onChange={(event) => {setUsernameInput(event.target.value)}}/>
-                        <p style={{ color:"#b72b2b", fontSize: "0.8rem", fontWeight:"bold", marginLeft:"0.5rem"}}>
+                        <p style={{ color:"#b72b2b", fontSize: "1rem", fontWeight:"bold", marginLeft:"0.5rem"}}>
                             {errorMessage}
                         </p>
                     </Form.Group>
@@ -60,7 +60,7 @@ function LoginForm () {
             </Row>
         </Container>         
         <Card.Body>
-            <Link to={validateRedirectLink()} className="--link-dark" style={{ fontSize: '0.8rem'}}>
+            <Link to={validateRedirectLink()} className="--link-dark ms-4" style={{ fontSize: '1rem'}}>
                 {"< "}return to previous page
             </Link>
         </Card.Body>
