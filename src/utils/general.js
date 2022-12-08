@@ -1,5 +1,5 @@
 export function getRedirectUrl(location) { 
-    console.log(location)      
+     
     if (location.pathname === "/") {
         return "/login";
     }
