@@ -14,8 +14,13 @@ h1 {
 
 /* Modifiers */
 
+.--brand-logo {
+  font-size: 3rem !important;
+}
+
 .--text-light{
   color: rgb(255, 254, 254);
+  font-size: 4rem !important;
 }
 
 .--site-bg-primary{
@@ -102,7 +107,7 @@ h1 {
 
 .header-sign-in-button {
   color: rgb(255, 254, 254);
-  font-size: 1rem;
+  font-size: 1.3rem;
   margin: 0 1rem;
 }
 

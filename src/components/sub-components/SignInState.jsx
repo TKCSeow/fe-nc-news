@@ -18,7 +18,7 @@ export function SignInState() {
 
     if (user === null) {
         return <Link to={getRedirectUrl(location)} className='header-sign-in-button m-0  --link-light'>
-            <div className='d-flex justify-content-end mt-3 text-end'><User/>Sign In</div>
+            <div className='d-flex justify-content-end mt-3 text-end'><User  size={32}/>Sign In</div>
         </Link>
     }
 

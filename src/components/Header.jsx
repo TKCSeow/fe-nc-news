@@ -10,7 +10,7 @@ function Header () {
             <Row>
                 <Col xs={8}>
                     <a href="/" className="site-header__link">
-                        <h1>NC News</h1>
+                        <h1 className="--brand-logo">NC News</h1>
                     </a>                 
                 </Col>
                 <Col xs={4}>
