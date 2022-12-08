@@ -5,15 +5,9 @@ const newsApi = axios.create({
 })
 
 export function getArticles(topic){
-    let queries = "?";
-
-    if (topic) {
-        queries += `topic=${topic}`;
-    }
-
-    queries = queries !== "?" ? queries : "";
-
-    return newsApi(`/articles${queries}`)
+    return newsApi(`/articles`, {
+        params: { topic }
+    })
         .then((response) => {
             return response.data.articles;
         })

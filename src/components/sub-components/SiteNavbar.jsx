@@ -21,33 +21,32 @@ import { NavDropdown } from 'react-bootstrap';
 
     function toggleTopicsDropdown() {
         if (isSmallScreen) {
-            return <NavDropdown title="Topics" id="topics-nav-dropdown">
-                {topics.map((topic) => {
-                    return <LinkContainer  key={topic.slug} to={{pathname:`/articles`, search:`topic=${topic.slug}`}} className="text-capitalize">
-                        <NavDropdown.Item>{topic.slug}</NavDropdown.Item>
-                    </LinkContainer>
-                })}
-
-            </NavDropdown>
+            return 
         }
 
 
-        return topics.map((topic) => {
-            return <Link key={topic.slug} to={`/articles?topic=${topic.slug}`}className="site-navbar__link text-capitalize"><span>{topic.slug}</span></Link>
-        })
+        return 
     }
 
     return <Navbar className="site-navbar g-0" style={{marginBottom:"0 !important"}}>
         <Container className="--content-width">
-            {/* <Navbar.Toggle aria-controls="site-navbar-nav" /> */}
-            {/* <Navbar.Collapse id="basic-navbar-nav"> */}
             <Nav className="me-auto">
 
                 <Link to="/"className="site-navbar__link">Home</Link>
               
-                {toggleTopicsDropdown()}
+                {isSmallScreen ? 
+                    <NavDropdown title="Topics" id="topics-nav-dropdown">
+                        {topics.map((topic) => {
+                            return <LinkContainer  key={topic.slug} to={{pathname:`/articles`, search:`topic=${topic.slug}`}} className="text-capitalize">
+                                <NavDropdown.Item>{topic.slug}</NavDropdown.Item>
+                            </LinkContainer>
+                        })}
+                    </NavDropdown>
+                    : topics.map((topic) => {
+                        return <Link key={topic.slug} to={`/articles?topic=${topic.slug}`}className="site-navbar__link text-capitalize"><span>{topic.slug}</span></Link>
+                    })
+                }
             </Nav>
-            {/* </Navbar.Collapse> */}
             
             
         </Container>
