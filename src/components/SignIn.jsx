@@ -2,7 +2,7 @@ import Container from "react-bootstrap/Container";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import { Link } from "react-router-dom";
-import LoginForm from "./sub-components/SignInForm";
+import SignInForm from "./sub-components/SignInForm";
 
 function Login () {
 
@@ -15,7 +15,7 @@ function Login () {
                     </Link>                 
                 </Col>
                 <Col sm={6} className="my-3">
-                    <LoginForm/>          
+                    <SignInForm/>          
                 </Col>
             </Row>
         </Container>
