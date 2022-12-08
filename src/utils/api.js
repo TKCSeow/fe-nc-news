@@ -45,3 +45,10 @@ export function postCommentByArticleId(articleId, userName, text){
             return response.data.comment;
         })
 }
+
+export function getUsers(){
+    return newsApi(`/users`)
+        .then((response) => {
+            return response.data.users;
+        })
+}

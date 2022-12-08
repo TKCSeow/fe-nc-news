@@ -17,11 +17,11 @@ function Comments ({articleId}) {
         <p>COMMENTS</p>
         {comments.length === 0 ?
         <div>
-            <CommentForm/>
+            <CommentForm comments={comments} articleId={articleId}/>
             <p className="no-comment-message">No comments on this article</p>
         </div> :
         <div>
-            <CommentForm/>
+            <CommentForm setComments={setComments} articleId={articleId}/>
             <ul className="comment-list">
                 {comments.map((comment) => {
                     return <li key={comment.comment_id} className="comment-list-item">

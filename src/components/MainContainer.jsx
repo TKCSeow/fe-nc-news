@@ -8,6 +8,7 @@ function MainContainer () {
         <Container className="--content-width">
             <Routes>
                 <Route path="/" element={<ArticleList/>} />
+                <Route path="/articles" element={<ArticleList/>} />
                 <Route path={`/articles/:article`} element={<Article/>} />
             </Routes>
         </Container>
