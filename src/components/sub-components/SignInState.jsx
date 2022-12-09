@@ -18,15 +18,15 @@ export function SignInState() {
 
     if (user === null) {
         return <Link to={getRedirectUrl(location)} className='header-sign-in-button m-0  --link-light'>
-            <div className='d-flex justify-content-end mt-3 text-end'><User  size={32}/>Sign In</div>
+            <div className='d-flex justify-content-end text-end'><User size={32}/>Sign In</div>
         </Link>
     }
 
-    return <div className='header-sign-in-button mt-2' style={{fontSize:"1.3rem"}}>
-        <div className='text-end'><User/><span className='mx-1'>Hi {user.username}</span></div>
+    return <div className='header-sign-in-button mt-2' style={{fontSize:"1.1rem"}}>
+        <div className='text-end'><User size={28} /><span className='mx-1'>Hi {user.username}</span>
         <Link onClick={() => {handleSignOut()}} className='--link-dark-alt' style={{fontSize:"1rem"}} >
-            <p className='m-0 text-end'>(Sign Out)</p>
-        </Link>
+            <span className='m-0 ms-1 text-end'>(Sign Out)</span>
+        </Link></div>
     </div>
 
 }
