@@ -15,6 +15,7 @@ function ArticleList ({articlesInput, isFirstStyled = true}) {
 
 
     useEffect(() => {
+        setIsNoArticlesFound(false)
         if (articlesInput !== undefined) {
             return setArticles(articlesInput);
         }

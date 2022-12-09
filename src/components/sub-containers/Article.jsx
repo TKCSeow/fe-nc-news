@@ -14,6 +14,8 @@ function Article () {
     const articleId = useParams().article;
 
     useEffect(() => {
+        setIsNoArticlesFound(false)
+        
         getArticleById(articleId).then((articleData)=>{
             setArticle(articleData);
         }).catch(()=> {
