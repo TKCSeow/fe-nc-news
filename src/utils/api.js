@@ -38,6 +38,13 @@ export function getCommentsByArticleId(id){
         })
 }
 
+export function getComments(author){
+    return newsApi(`/comments`, {params: {author}})
+        .then((response) => {
+            return response.data.comments;
+        })
+}
+
 export function postCommentByArticleId(articleId, userName, text){
     return newsApi.post(`/articles/${articleId}/comments`, {
         username: userName,
@@ -59,5 +66,12 @@ export function getTopics(){
     return newsApi(`/topics`)
         .then((response) => {
             return response.data.topics;
+        })
+}
+
+export function deleteComment(commentId){
+    return newsApi.delete(`/comments/${commentId}`)
+        .then((response) => {
+            return response.status;
         })
 }

@@ -306,6 +306,7 @@ h1 {
   font-size: 1rem;
   list-style: none;
   margin: 0;
+  margin-top: 1rem;
   padding: 0;
 }
 
@@ -326,6 +327,12 @@ h1 {
 .no-comment-message {
   color: #787878;
   font-size: 1rem;
+}
+
+.comment-deleted-message {
+  color: #848484;
+  font-style: italic;
+  text-align: center;
 }
 
 .votes-button  {
@@ -361,6 +368,25 @@ h1 {
   font-size: 1rem;
   margin-top: 0.5rem;
   padding: 0;
+}
+
+.delete-button  {
+  color: #fffefe !important;
+  background-color: #fa5252 !important;
+  border: 2px solid #fa5252 !important;
+  border-radius: 0 !important;
+  padding: 0.2rem 0.5rem !important;
+}
+
+.delete-button:hover {
+  color:rgb(255, 254, 254) !important;
+  background-color: #c23e3e !important;
+  border-color: #c23e3e !important;
+}
+
+.delete-button:active {
+  background-color: #cf6d6d !important;
+  border-color: #cf6d6d !important;
 }
 
 /* Search */
