@@ -15,7 +15,6 @@ import { NavDropdown } from 'react-bootstrap';
     useEffect(()=> {
         getTopics().then(topicsData => {
             setTopics(topicsData);
-            console.log(topicsData)
         })
     },[])
 
