@@ -24,7 +24,7 @@ function ArticleList ({articlesInput, isFirstStyled = true}) {
         })
     }, [searchParams, articlesInput])
 
-    if (articles.length === 0) {
+    if (articles.length === 0 && articlesInput === undefined) {
         if (topic) {
             return <h2 className="m-4 text-center">404 No Articles of Topic "{topic}"" Found</h2>
         }
