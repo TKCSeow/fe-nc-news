@@ -339,3 +339,22 @@ h1 {
   padding: 0;
 }
 
+.delete-button  {
+  color: #fffefe !important;
+  background-color: #fa5252 !important;
+  border: 2px solid #fa5252 !important;
+  border-radius: 0 !important;
+  padding: 0.2rem 0.5rem !important;
+}
+
+.delete-button:hover {
+  color:rgb(255, 254, 254) !important;
+  background-color: #c23e3e !important;
+  border-color: #c23e3e !important;
+}
+
+.delete-button:active {
+  background-color: #cf6d6d !important;
+  border-color: #cf6d6d !important;
+}
+
