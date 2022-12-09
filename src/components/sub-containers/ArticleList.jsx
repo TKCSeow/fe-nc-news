@@ -10,6 +10,7 @@ function ArticleList ({articlesInput, isFirstStyled = true}) {
     const [articles, setArticles] = useState([]);
     const [searchParams] = useSearchParams();
     const topic = searchParams.get("topic")
+    const [isNoArticlesFound, setIsNoArticlesFound] = useState(false);
 
 
 
@@ -21,10 +22,11 @@ function ArticleList ({articlesInput, isFirstStyled = true}) {
             setArticles(articlesData);
         }).catch(()=>{
             setArticles([]);
+            setIsNoArticlesFound(true)
         })
     }, [searchParams, articlesInput])
 
-    if (articles.length === 0 && articlesInput === undefined) {
+    if (isNoArticlesFound) {
         if (topic) {
             return <h2 className="m-4 text-center">404 No Articles of Topic "{topic}"" Found</h2>
         }

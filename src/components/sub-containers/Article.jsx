@@ -9,17 +9,24 @@ import Comments from "../sub-components/Comments";
 
 function Article () {
     const [article, setArticle] = useState(null);
+    const [isNoArticlesFound, setIsNoArticlesFound] = useState(false);
 
     const articleId = useParams().article;
 
     useEffect(() => {
         getArticleById(articleId).then((articleData)=>{
             setArticle(articleData);
+        }).catch(()=> {
+            setIsNoArticlesFound(true)
         })
     }, [])
 
-    if(article === null) {
+    if(isNoArticlesFound) {
         return <h2 className="m-4 text-center">404 Article Not Found</h2>;
+    }
+
+    if(article === null) {
+        return null
     }
 
     return <section className="--article-width m-auto">
