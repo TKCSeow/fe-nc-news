@@ -38,7 +38,6 @@ or the hosted backend version here: https://tim-nc-news.cyclic.app/api
 ## Minimum Requirements
 
 <p>Node.js version 18 or higher</p>
-<p>Postgres version 12 or higher</p>
 
 [React-url]: https://reactjs.org/
 [React]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
