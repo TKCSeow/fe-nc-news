@@ -306,6 +306,7 @@ h1 {
   font-size: 1rem;
   list-style: none;
   margin: 0;
+  margin-top: 1rem;
   padding: 0;
 }
 
@@ -326,6 +327,12 @@ h1 {
 .no-comment-message {
   color: #787878;
   font-size: 1rem;
+}
+
+.comment-deleted-message {
+  color: #848484;
+  font-style: italic;
+  text-align: center;
 }
 
 .votes-button  {

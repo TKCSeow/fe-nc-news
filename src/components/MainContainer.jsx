@@ -3,6 +3,7 @@ import ArticleList from "./sub-containers/ArticleList";
 import {Routes, Route} from 'react-router'
 import Article from "./sub-containers/Article";
 import Search from "./sub-containers/Search";
+import { ViewComments } from "./sub-containers/ViewComments";
 
 function MainContainer () {
 
@@ -13,6 +14,7 @@ function MainContainer () {
                 <Route path="/articles" element={<ArticleList/>} />
                 <Route path={`/articles/:article`} element={<Article/>} />
                 <Route path="/search" element={<Search/>} />
+                <Route path="/account/view-comments" element={<ViewComments/>}/>
             </Routes>
         </Container>
     </main>
