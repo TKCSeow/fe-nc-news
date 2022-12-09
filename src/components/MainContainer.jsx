@@ -13,6 +13,7 @@ function MainContainer () {
                 <Route path="/" element={<ArticleList/>} />
                 <Route path="/articles" element={<ArticleList/>} />
                 <Route path={`/articles/:article`} element={<Article/>} />
+                <Route path="/*" element={<h2 className="m-4 text-center">404 Page Not Found</h2>}/>
                 <Route path="/search" element={<Search/>} />
                 <Route path="/account/view-comments" element={<ViewComments/>}/>
             </Routes>

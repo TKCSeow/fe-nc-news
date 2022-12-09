@@ -10,17 +10,30 @@ function ArticleList ({articlesInput, isFirstStyled = true}) {
     const [articles, setArticles] = useState([]);
     const [searchParams] = useSearchParams();
     const topic = searchParams.get("topic")
+    const [isNoArticlesFound, setIsNoArticlesFound] = useState(false);
 
 
 
     useEffect(() => {
+        setIsNoArticlesFound(false)
         if (articlesInput !== undefined) {
             return setArticles(articlesInput);
         }
         getArticles(topic).then((articlesData)=>{
             setArticles(articlesData);
+        }).catch(()=>{
+            setArticles([]);
+            setIsNoArticlesFound(true)
         })
     }, [searchParams, articlesInput])
+
+    if (isNoArticlesFound) {
+        if (topic) {
+            return <h2 className="m-4 text-center">404 No Articles of Topic "{topic}"" Found</h2>
+        }
+
+        return <h2 className="m-4 text-center">404 No Articles Found</h2>
+    }
 
     return <section>
         {topic ? <h2 className="text-capitalize topic-header">{topic}</h2> : null}
