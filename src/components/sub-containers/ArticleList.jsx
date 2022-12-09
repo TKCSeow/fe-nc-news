@@ -13,8 +13,18 @@ function ArticleList () {
     useEffect(() => {
         getArticles(topic).then((articlesData)=>{
             setArticles(articlesData);
+        }).catch(()=>{
+            setArticles([]);
         })
     }, [searchParams])
+
+    if (articles.length === 0) {
+        if (topic) {
+            return <h2 className="m-4 text-center">404 No Articles of Topic "{topic}"" Found</h2>
+        }
+
+        return <h2 className="m-4 text-center">404 No Articles Found</h2>
+    }
 
     return <section>
         {topic ? <h2 className="text-capitalize topic-header">{topic}</h2> : null}

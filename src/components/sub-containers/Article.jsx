@@ -19,7 +19,7 @@ function Article () {
     }, [])
 
     if(article === null) {
-        return null;
+        return <h2 className="m-4 text-center">404 Article Not Found</h2>;
     }
 
     return <section className="--article-width m-auto">
