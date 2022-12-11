@@ -1,70 +1,53 @@
-# Getting Started with Create React App
+# Front End Project - NC News
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Find hosted version here: https://tim-nc-news.netlify.app/
 
-## Available Scripts
+## Introduction
 
-In the project directory, you can run:
+This is a front end project built as part of my time on the Northcoders bootcamp. This project is to showcase what I have learnt about frontend development using the React framework.
+This project is based on the backend server also creates as part of the bootcamp, which can be found here: https://github.com/TKCSeow/backend-server-nc-news
+or the hosted backend version here: https://tim-nc-news.cyclic.app/api
 
-### `npm start`
+### Technologies used to develop this project:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+[![React]][React-url]
+<br> [![react-bootstrap]][react-bootstrap-url]
+<br> [![React-Router]][React-Router-url]
+<br> [![Javascript]][Javascript-url]
+<br> ![HTML]
+<br> ![CSS]
+<br> [![VSCode]][VSCode-url]
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## How to setup project
 
-### `npm test`
+1. Clone the repo
+   ```sh
+   git clone https://github.com/TKCSeow/fe-nc-news.git
+   ```
+    cd into the newly created directory
+    <br>
+2. Install NPM packages
+   ```sh
+   npm install
+   ```
+3. Start the server
+   ```sh
+   npm start
+   ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Minimum Requirements
 
-### `npm run build`
+<p>Node.js version 18 or higher</p>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[React-url]: https://reactjs.org/
+[React]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
+[Javascript-url]: https://www.javascript.com/
+[Javascript]: https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black
+[react-bootstrap-url]: https://react-bootstrap.github.io/
+[react-bootstrap]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
+[HTML]: https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white
+[CSS]: https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white
+[React-Router-url]: https://reactrouter.com/en/main
+[React-Router]: https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white
+[VSCode-url]: https://code.visualstudio.com/
+[VSCode]: 	https://img.shields.io/badge/Visual_Studio_Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white
