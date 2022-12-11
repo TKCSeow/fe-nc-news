@@ -25,7 +25,7 @@ function ArticleList ({articlesInput, isFirstStyled = true}) {
             setArticles([]);
             setIsNoArticlesFound(true)
         })
-    }, [searchParams, articlesInput])
+    }, [searchParams, articlesInput, topic])
 
     if (isNoArticlesFound) {
         if (topic) {
@@ -67,6 +67,8 @@ function ArticleList ({articlesInput, isFirstStyled = true}) {
                             </Col>                       
                         </Row>
                     }             
+
+                    return null
                 })
                 : articles.map((article) => {
                     return <ArticleListItemAlt key={article.article_id} article={article}/>

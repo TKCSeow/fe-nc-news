@@ -21,7 +21,7 @@ function Article () {
         }).catch(()=> {
             setIsNoArticlesFound(true)
         })
-    }, [])
+    }, [articleId])
 
     if(isNoArticlesFound) {
         return <h2 className="m-4 text-center">404 Article Not Found</h2>;

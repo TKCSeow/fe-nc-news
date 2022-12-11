@@ -18,7 +18,7 @@ function Comments ({articleId}) {
         getCommentsByArticleId(articleId).then((commentsData)=>{
             setComments(commentsData);
         })
-    }, [])
+    }, [articleId])
 
     useEffect(() => {
         if (isDeleteConfirmed === true) {

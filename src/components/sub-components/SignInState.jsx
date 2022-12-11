@@ -45,11 +45,4 @@ export function SignInState() {
         </NavDropdown>
     </div>
 
-    return <div className='header-sign-in-button mt-2' style={{fontSize:"1.1rem"}}>
-        <div className='text-end'><User size={28} /><span className='mx-1'>Hi {user.username}</span>
-        <Link onClick={() => {handleSignOut()}} className='--link-dark-alt' style={{fontSize:"1rem"}} >
-            <span className='m-0 ms-1 text-end'>(Sign Out)</span>
-        </Link></div>
-    </div>
-
 }

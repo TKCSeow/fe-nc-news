@@ -1,4 +1,3 @@
-import Container from 'react-bootstrap/Container';
 import ArticleList from './ArticleList';
 import { useEffect, useState } from "react";
 import { getArticles } from '../../utils/api';
@@ -39,7 +38,7 @@ import { useSearchParams } from 'react-router-dom'
             setArticles(filteredArticles);
 
         })
-    }, [filters, sortIndex, searchParams])
+    }, [filters, sortIndex, searchParamValue])
 
     return <div>
         <Row>
